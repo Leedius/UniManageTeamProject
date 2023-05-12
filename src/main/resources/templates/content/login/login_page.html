@@ -4,8 +4,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<!-- header에 적용되는 css파일 -->
+<!-- common에 적용되는 css파일 -->
+<link rel="stylesheet" href="/css/common.css">
+
+<!-- 해당 html css파일 -->
 <link rel="stylesheet" href="/css/content/login/login_page.css">
+
 
 <!-- bootstrap css파일 로딩 -->
 <link
@@ -20,16 +24,16 @@
 		<img alt="배경" src="/image/login/login_background.jpg" width="100%" height="100%">
 	</div>
 	<div class="login_input">
-		<div class="row">
+		<div class="row mt-4">
 			<div class="col-1"></div>
-			<div class="col-2">
+			<div class="col-3">
 				로고들어갈자리
 			</div>	
-			<div class="col-9">
+			<div class="col-8 text-start">
 				학사행정웹서비스
 			</div>
 		</div>
-		<div class="row">
+		<div class="row mt-3">
 			<div class="col-1"></div>
 			<div class="col-1">
 				KR
@@ -39,32 +43,27 @@
 			</div>
 			<div class="col-9"></div>
 		</div>
-		<div class="row">
+		<div class="row mt-3">
 			<div class="col-1"></div>
-			<div class="col-6">
-				<div class="input_id">
-					<input type="text" name="memId" placeholder="아이디">
+			<div class="col-3">
+				<div class="input_id mb-1">
+					<input class="form-control" type="text" name="memId" placeholder="아이디">
 				</div>
 				<div class="input_pw">
-					<input type="password" name="memPw" placeholder="아이디">
+					<input class="form-control" type="password" name="memPw" placeholder="비밀번호">
 				</div>
 			</div>
-			<div class="col-2">
-				<input type="button" value="로그인">
+			<div class="col-1">
+				<input class="btn btn-primary login_btn" type="button" value="로그인">
 			</div>
-			<div class="col-3">
+			<div class="col-7">
 			</div>
 		</div>
-		<div class="row">
+		<div class="row iuput_info">
 			<div class="col-1"></div>
-			<div class="col-2">
-				아이디 찾기
-			</div>
-			<div class="col-1">
-				|
-			</div>
-			<div class="col-2">
-				비밀번호 찾기
+			<div class="col-4 mt-3">
+				<span>아이디 찾기</span>
+				<span>비밀번호 찾기</span>
 			</div>
 		</div>
 		<div class="row sub_menu">
@@ -74,6 +73,8 @@
 				<span>원격지원</span>				
 			</div>
 		</div>
+	</div>
+	<div class="">
 	</div>
 <!-- header페이지 js파일 로딩 -->
 <script type="text/javascript" src="/js/header.js"></script>
