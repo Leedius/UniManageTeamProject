@@ -11,8 +11,6 @@ public class IndexController {
 
 	@GetMapping("/")
 	public String index() {
-		
-
-		return "content/info_main";
+		return "content/login/login_page";
 	}
 }
