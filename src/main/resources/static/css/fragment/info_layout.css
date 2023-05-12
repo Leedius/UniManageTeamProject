@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/*
+.container{
+	margin: 0px;
+
+
+
+}
+*/
+body{
+width: 100%;
+	margin: 0px;
+
+
+}
+
+.full_layout {
+	background-color: #eee;
+	height: 100vh;
+	
+}
