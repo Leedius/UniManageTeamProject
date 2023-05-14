@@ -22,18 +22,18 @@
 		</tr>
 		<tr>
 			<th:block th:each="menu : ${menuList}">
-				<td class="list-group-item" th:onclick="d([[${menu.menuCode}]],[[${menu.menuUrl}]]);"
+				<td class="list-group-item" th:onclick="mainMenu([[${menu.menuCode}]],[[${menu.menuUrl}]]);"
 				th:classappend="${menu.menuCode == menu.menuCode ? 'active' : ''}">
 					[[${menu.menuName}]]
 				</td>			
 			<th:block th:each="subMenu : ${subMenuList}">
 				<th:block th:if="${menu.menuCode == subMenu.menuCode}">
-							<td class="list-group-item">  [[${subMenu.subMenuName}]]</td>
+							<td class="list-group-item" th:onclick="subMenu([[${subMenu.subMenuCode}]],[[${subMenu.subMenuUrl}]],[[${menu.menuCode}]]);">  [[${subMenu.subMenuName}]]</td>
 					</th:block>
 				</th:block>	
 			</th:block>		
 		</tr>			
-	</table>	
+	</table>
 
 	
 </div>

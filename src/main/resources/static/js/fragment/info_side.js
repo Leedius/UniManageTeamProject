@@ -1,7 +1,14 @@
 
-function d(menuCode, menuUrl){
+function mainMenu(menuCode, menuUrl){
 
-	location.href=`/member${menuUrl}?menuCode=${menuCode}`;
+	location.href=`/memberMenu${menuUrl}?menuCode=${menuCode}`;
+	
+	
+}
+
+function subMenu(subMenuCode, subMenuUrl, menuCode){
+	location.href=`/memberMenu${subMenuUrl}?menuCode=${menuCode}`;
+	// subMenuCode=${subMenuCode} 
 }
 
 //내 정보 관리
