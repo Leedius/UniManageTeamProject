@@ -30,5 +30,10 @@ public class IndexController {
 		System.out.println("@@@@@@@@@@@@@" + memberService.stuMenuList());
 
 		return "/content/info/info_main";
+
+	/*public String index() {
+		return "content/login/login_page";
+
+	}*/
 	}
 }

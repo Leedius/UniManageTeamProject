@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.login_backgroung{
+	margin-top: 5rem;
+	width: 130vh;
+	height: 60vh;
+	z-index: 0;
+}
+
+.login_backgroung img{
+	border-top-right-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+}
+
+.login_input{
+	height: 50vh;
+	background-color: #eee0ce;
+	width: 60%;
+	float: right;
+	text-align: center;
+	margin-top: -40vh;
+	position: relative;
+	z-index: 100;
+	border-top-left-radius: 2rem;
+}
+
+.login_input > .row:last-child{
+	background-color: #d3c4b2; 
+	height: 2rem;
+}
+
+/* 로그인 버튼 */
+.login_btn{
+	height: 100%;
+}
+
+/* 아이디찾기 비밀번호찾기 정렬 */
+.iuput_info span::before{padding-right: 3vh; padding-left: 2vh; content: "|"; color: #d3c4b2}
+.iuput_info span:first-child::before{content: ""; padding: 0}
+
+/* 서브메뉴 정렬 */
+.sub_menu span::before{padding-right: 5px; content: "|"; color: #d3c4b2}
+.sub_menu span:first-child::before{content: ""}
