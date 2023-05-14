@@ -20,17 +20,23 @@ table{
 }
 
 table tr:first-child td {
-	width: 500px;
+	/* width: 500px; */
 }
 
-table tr td:nth-child(1) {
-	width: 80px;
+
+td:hover {
+  background-color: green;
 }
+table tr td:nth-child(1) {
+	width: 150px;
+}
+
+
 
 table tr td:nth-child(2) {
 	width: auto;
-	height: 100%;
-	background-color: red;
+	height: 1000%;
+	/* background-color: red; */
 	/* display: none; */
 }
 

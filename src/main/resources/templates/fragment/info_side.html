@@ -11,39 +11,30 @@
 		</svg>
 		<input type="text" id="menuSearch" style="background-color: yellow;"  placeholder="메뉴를 검색하세요.">
 	</div>
-		<div>★ 즐겨찾는 메뉴</div>
-		<table class="list-group" style="background-color: yellow;">
-			<tr>
-				<td class="list-group-item active">채플</td>
-				<td class="update">채플출석조회</td>
-			</tr>
-			<tr>
-				<td class="list-group-item" colspan="1" onclick="sc();">학적</td>
-				<td>
-					<!-- <ul>
-						<li>d</li>
-						<li>d</li>
-						<li>d</li>
-					</ul> -->
-				</td>
-			</tr>
-			<tr>
-				<td class="list-group-item" >수강</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td class="list-group-item" > 성적</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td class="list-group-item" >장학</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td class="list-group-item">등록</td>
-				<td></td>
-			</tr>
+	<table class="list-group">
+		
 	</table>
+		
+	<table class="list-group">
+		<tr>
+			<td> </td>
+			<td class="list-group-item" > 즐겨찾기</td>
+		</tr>
+		<tr>
+			<th:block th:each="menu : ${menuList}">
+				<td class="list-group-item" th:onclick="d([[${menu.menuCode}]],[[${menu.menuUrl}]]);"
+				th:classappend="${menu.menuCode == menu.menuCode ? 'active' : ''}">
+					[[${menu.menuName}]]
+				</td>			
+			<th:block th:each="subMenu : ${subMenuList}">
+				<th:block th:if="${menu.menuCode == subMenu.menuCode}">
+							<td class="list-group-item">  [[${subMenu.subMenuName}]]</td>
+					</th:block>
+				</th:block>	
+			</th:block>		
+		</tr>			
+	</table>	
+
 	
 </div>
 <script type="text/javascript" src="/js/fragment/info_side.js"></script>

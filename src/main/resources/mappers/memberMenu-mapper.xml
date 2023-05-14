@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="memberMenuMapper">
+	<!-- 학생 메뉴  -->
+	<resultMap type="com.study.test.member.vo.MemberMenuVO" id="menu">
+		<id column="MENU_CODE" property="menuCode"/>
+		<result column="MENU_NAME" property="menuName"/>
+		<result column="MENU_URL" property="menuUrl"/>
+	</resultMap>
+	
+	<!-- 학생 메뉴 조회 -->
+	<select id="stuMenuList" resultMap="menu">
+		SELECT MENU_CODE
+			, MENU_NAME
+			, MENU_URL
+		FROM STU_MENU
+	</select>
+	
+	<!-- 학생 서브 메뉴  -->
+	<resultMap type="com.study.test.member.vo.MemberSubMenuVO" id="submenu">
+		<id column="SUB_MENU_CODE" property="subMenuCode"/>
+		<result column="SUB_MENU_NAME" property="subMenuName"/>
+		<result column="SUB_MENU_URL" property="subMenuUrl"/>
+		<result column="MENU_CODE" property="menuCode"/>
+	</resultMap>
+	
+	<!-- 학생 서브 메뉴 조회 -->
+	<select id="stuSubMenuList" resultMap="submenu">
+		SELECT SUB_MENU_CODE
+			, SUB_MENU_NAME
+			, SUB_MENU_URL
+			, MENU_CODE
+		FROM STU_SUB_MENU
+		WHERE MENU_CODE = #{menuCode}
+	</select>
+
+	
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
