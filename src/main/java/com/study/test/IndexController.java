@@ -17,7 +17,12 @@ public class IndexController {
 	@Resource(name = "memberService")
 	private MemberService memberService;
 
-	@GetMapping("/")
+	@GetMapping("/mainPage")
+	public String index() {
+	return "content/login/login_page";
+	}
+	
+	@GetMapping("/mainPage")
 	public String index(Model model, MemberMenuVO memberMenuVO) {
 
 		if(memberMenuVO.getMenuCode() == null) {
@@ -31,9 +36,6 @@ public class IndexController {
 
 		return "/content/info/info_main";
 
-	/*public String index() {
-		return "content/login/login_page";
 
-	}*/
 	}
 }
